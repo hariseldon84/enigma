@@ -1,0 +1,50 @@
+# Ignore everything by default
+*
+
+# But allow .md files anywhere in the repository
+!*.md
+!**/*.md
+
+# Allow directories (so git can traverse them to find .md files)
+!*/
+
+# Don't ignore this .gitignore file
+!.gitignore
+
+# Specific exclusions for common file types (just to be explicit)
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.zip
+*.tar
+*.gz
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.mov
+*.avi
+*.mp3
+*.wav
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
