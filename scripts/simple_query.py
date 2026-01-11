@@ -45,7 +45,7 @@ def build_context(documents):
 
     return "\n---\n\n".join(context_parts)
 
-def query_enigma(question, context, model="qwen3:8b"):
+def query_enigma(question, context, model="gemma2:2b"):
     """Send query to Ollama with context."""
 
     system_prompt = """You are Enigma, a personal cognitive operating system.
@@ -90,7 +90,11 @@ Remember: Only use information from these documents. Cite your sources. Be clear
                     'role': 'user',
                     'content': user_prompt
                 }
-            ]
+            ],
+            options={
+                'temperature': 0.3,  # Lower = faster, more focused
+                'num_predict': 800   # Limit response length for speed
+            }
         )
 
         return response['message']['content']

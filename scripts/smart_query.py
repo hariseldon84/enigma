@@ -60,7 +60,7 @@ def format_context(search_results):
 
     return "\n---\n\n".join(context_parts)
 
-def query_enigma(question, context, model="qwen3:8b"):
+def query_enigma(question, context, model="gemma2:2b"):
     """Send query to Ollama with context."""
 
     system_prompt = """You are Enigma, a personal cognitive operating system.
@@ -102,7 +102,11 @@ Remember: Only use information from these excerpts. Cite your sources. Be clear 
                     'role': 'user',
                     'content': user_prompt
                 }
-            ]
+            ],
+            options={
+                'temperature': 0.3,  # Lower = faster, more focused
+                'num_predict': 800   # Limit response length for speed
+            }
         )
 
         return response['message']['content']
@@ -128,7 +132,7 @@ def main():
 
     # Search for relevant chunks
     print("🔍 Searching knowledge base...")
-    search_results = search_knowledge(question, n_results=5)
+    search_results = search_knowledge(question, n_results=3)
 
     num_results = len(search_results['documents'][0])
     print(f"✅ Found {num_results} relevant chunks\n")
@@ -148,7 +152,7 @@ def main():
     context = format_context(search_results)
 
     # Query Enigma
-    print("🤔 Querying Enigma...")
+    print("🤔 Querying Enigma (using model: gemma2:2b)...")
     answer = query_enigma(question, context)
 
     # Display answer
