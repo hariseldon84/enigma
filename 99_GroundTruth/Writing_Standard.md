@@ -1,8 +1,8 @@
 # Writing Standard — Voice, Tone & Communication Principles
 
-**Last Updated:** 2026-01-10
-**Classification:** Ground Truth (Layer 1 - Immutable)
-**Purpose:** Defines how I write, how Enigma should write, and what constitutes acceptable communication quality.
+**Last Updated:** 2026-01-11
+**Classification:** Ground Truth (Layer 1 - Immutable)  
+**Purpose:** Defines how I write, how Enigma should write, and what constitutes acceptable communication quality. Enhanced for comprehensive document processing.
 
 ---
 
@@ -319,3 +319,66 @@ The goal is to **make the reader smarter, faster.**
 ---
 
 **END OF WRITING STANDARD**
+
+---
+
+## ENHANCED DOCUMENT PROCESSING STANDARDS
+
+*Added 2026-01-11 for comprehensive document analysis and proofreading*
+
+### GRAMMAR ENFORCEMENT RULES
+
+**Sentence Construction Standards:**
+- Active voice strongly preferred: "The system processes data" not "Data is processed by the system"
+- Vary sentence length: Mix short punchy sentences with longer explanatory ones
+- Parallel construction required: Lists and series must maintain consistent grammatical structure
+- Complete sentences only: No fragments unless used deliberately for emphasis
+
+**Punctuation Requirements:**
+- Oxford comma required: Always use serial comma in lists (A, B, and C)
+- Em dashes for breaks: Use — not -- for interruptions or emphasis
+- Consistent quotation marks: "Double quotes" for direct quotes, 'single quotes' for nested quotes
+- Semicolons sparingly: Use only to connect related independent clauses
+
+**Verb Tense Consistency:**
+- Present tense for current state: "The system works this way"
+- Past tense for completed actions: "We built this feature" 
+- Future tense for planned actions: "We will implement this"
+- Consistent within sections: Don't mix tenses unnecessarily
+
+### PROOFREADING QUALITY CHECKLIST
+
+**Content and Structure (First Pass):**
+- [ ] Document achieves its stated purpose
+- [ ] Information is organized logically
+- [ ] All sections connect coherently  
+- [ ] Conclusions follow from evidence presented
+
+**Style and Clarity (Second Pass):**
+- [ ] No buzzwords or weak language
+- [ ] Active voice used where appropriate
+- [ ] Sentences vary in length and structure
+- [ ] Technical concepts are explained clearly
+
+**Grammar and Mechanics (Third Pass):**
+- [ ] Subject-verb agreement throughout
+- [ ] Consistent verb tense within sections
+- [ ] Proper punctuation (especially commas and apostrophes)
+- [ ] Correct spelling of all words
+
+**Formatting and Polish (Final Pass):**
+- [ ] Consistent heading styles
+- [ ] Proper list formatting
+- [ ] Clean paragraph breaks
+- [ ] Professional overall appearance
+
+### DOCUMENT PROCESSING MODE REQUIREMENTS
+
+**CHECK Mode Criteria:**
+Identify and flag violations of grammar rules, style requirements, structure standards, and tone violations.
+
+**SUGGEST Mode Requirements:**
+For each issue found, provide specific text that needs improvement, clear explanation of why it's problematic, concrete suggested revision, and brief rationale for why the revision is better.
+
+**REFINE Mode Standards:**
+Create polished version that fixes all grammar and punctuation errors, eliminates all buzzwords and weak language, converts passive voice to active where appropriate, improves clarity and flow without changing meaning, and maintains author's voice and intent.

@@ -1,102 +1,105 @@
 # NEXT TASKS - What to Build Next
 
-**Last Updated:** 2026-01-10
-**Current Status:** Phase 1A Complete (Basic Query Working)
-**What Works Now:** Query Ground Truth docs, semantic search with gemma2:2b
+**Last Updated:** 2026-01-11
+**Current Status:** Enhanced Document Processing Complete ✅
+**What Works Now:** Full document processing workflow with grammar checking, proofreading, and PDF generation
 
 ---
 
-## ✅ COMPLETED TODAY
+## ✅ COMPLETED TODAY - MAJOR MILESTONE
+
+### ✅ ENHANCED DOCUMENT PROCESSING SYSTEM
+- [x] **Grammar checking** with comprehensive analysis
+- [x] **Proofreading** with Writing Standard enforcement  
+- [x] **PDF generation** from Word documents
+- [x] **Full edit workflow** automation
+- [x] **Product Genome processing** successfully tested
+- [x] **Comprehensive usage guide** created
+
+**Result:** Can now process, edit, proofread, and generate PDFs from Word documents automatically!
+
+**Usage:**
+```bash
+python3 scripts/enhanced_document_processor.py --file "path/to/file.docx" --action full_edit
+```
+
+---
+
+## ✅ PREVIOUSLY COMPLETED
 
 - [x] Folder structure created
-- [x] 7 seed documents written
+- [x] 7 seed documents written  
 - [x] Ollama installed (gemma2:2b working)
 - [x] Python dependencies installed
 - [x] Document indexer built (ChromaDB)
-- [x] Smart query script working
+- [x] Smart query script working  
 - [x] Can ask Enigma questions and get cited answers
+- [x] Support for multiple file types (.md, .docx, .pdf)
+- [x] Word document reading and indexing
+- [x] Basic document editor with check/suggest/refine modes
 
 ---
 
 ## 🎯 NEXT PRIORITY TASKS
 
-### TASK 1: Support More File Types (High Priority) ⭐⭐⭐
-**Time:** 30-45 minutes
-**Why:** You want to add PDFs and Word docs to Enigma
-
-**What to build:**
-- Extend `index_documents.py` to read:
-  - `.docx` (Word documents)
-  - `.pdf` (PDFs)
-  - `.txt` (Text files)
-
-**Result:** All your research, books, and Product Genome chapters become searchable
-
-**Test:**
-```bash
-# Add a PDF to Skills folder
-cp ~/Documents/book.pdf ~/Enigma/01_Skills_And_Education/
-
-# Re-index
-python3 scripts/index_documents.py
-
-# Query it
-python3 scripts/smart_query.py "What does the book say about..."
-```
-
----
-
-### TASK 2: Product Genome Word Document Editor (Top Priority) ⭐⭐⭐
+### TASK 1: Batch Document Processing ⭐⭐⭐
 **Time:** 1-2 hours
-**Why:** Your #1 frustration - "editing word doc for my book"
+**Why:** Process multiple Product Genome chapters at once
 
 **What to build:**
 ```bash
-python3 scripts/edit_document.py --file 03_Projects/Product_Genome/Chapter_01.docx --mode suggest
+python3 scripts/batch_document_processor.py --folder "03_Projects/Product_Genome" --action full_edit
 ```
 
 **Features:**
-1. Read Word document
-2. Analyze against Writing_Standard.md
-3. Check for:
-   - Buzzwords (synergy, revolutionary, etc.)
-   - Passive voice
-   - Vague statements
-   - Poor structure
-4. Suggest or apply improvements
-5. Show diff (what changed and why)
+- Process all .docx files in a directory
+- Generate processing report  
+- Parallel processing for speed
+- Error handling for individual files
 
-**Modes:**
-- `check` - Just analyze, show issues
-- `suggest` - Provide improvement suggestions
-- `refine` - Apply improvements automatically
-
-**Result:** Automate Product Genome editing (saves hours weekly)
+**Result:** Entire Product Genome book processed automatically
 
 ---
 
-### TASK 3: File Organization Automation (Medium Priority) ⭐⭐
-**Time:** 45-60 minutes
-**Why:** Managing scattered information is a time sink
+### TASK 2: Document Comparison and Version Control ⭐⭐
+**Time:** 45-60 minutes  
+**Why:** Track changes between original and proofread versions
 
 **What to build:**
-```bash
-python3 scripts/organize_files.py --source ~/Downloads --auto
-```
+- Side-by-side comparison viewer
+- Change tracking and highlighting
+- Accept/reject individual changes
+- Version history maintenance
 
-**Features:**
-- Watch Downloads folder
-- Auto-categorize files (PDF → Skills, DOCX → Projects, etc.)
-- Move to appropriate Enigma folder
-- Auto re-index
-
-**Result:** Files automatically organized and indexed
+**Result:** Better control over which edits to apply
 
 ---
 
-### TASK 4: Unified CLI Interface (Nice to Have) ⭐
+### TASK 3: Custom Style Guides ⭐⭐
+**Time:** 30-45 minutes
+**Why:** Different documents need different standards
+
+**What to build:**
+- Style guide templates for different document types
+- Technical documentation standards
+- Marketing copy guidelines
+- Academic paper formatting
+
+**Result:** Specialized processing for different use cases
+
+---
+
+### TASK 4: Integration with File Organization ⭐
 **Time:** 30 minutes
-**Why:** Easier to use one command for everything
+**Why:** Streamline workflow from file addition to processing
+
+**What to build:**
+- Auto-detect new documents in watched folders
+- Process and index automatically  
+- Move processed files to appropriate locations
+- Send completion notifications
+
+**Result:** Fully automated document workflow
 
 **What to build:**
 ```bash
