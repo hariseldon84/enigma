@@ -43,8 +43,25 @@ Thumbs.db
 *.swo
 *~
 
+# BMAD-Method and Development Tools
+.bmad-core/
+bmad-core/
+bmad/
+.cursor/
+cursor/
+claude/
+.claude/
+gemini/
+.gemini/
+github/
+.github/
+node_modules/
+
 # Temporary files
 *.tmp
 *.temp
 *.bak
 *.backup
+# BMAD (local only)
+.bmad-core/
+.bmad-*/
